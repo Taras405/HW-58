@@ -26,57 +26,57 @@ console.log('Коротких слів:', countItems(words, isShort));
 
 
 
-// const calculate = (a, b, operation) => operation(a, b);
+const calculate = (a, b, operation) => operation(a, b);
 
-// const add = (a, b) => a + b;
-// const subtract = (a, b) => a - b;
-// const multiply = (a, b) => a * b;
-// const divide = (a, b) => {
+const add = (a, b) => a + b;
+const subtract = (a, b) => a - b;
+const multiply = (a, b) => a * b;
+const divide = (a, b) => {
 
-//     if (b === 0) {
-//         return 'Помилка ділити на 0 неможна!';
-//     };
+    if (b === 0) {
+        return 'Помилка ділити на 0 неможна!';
+    };
 
-//     return a / b;
-// };
+    return a / b;
+};
 
-// // Тестування
-// console.log(calculate(10, 5, add));      // Повинно показати 15
-// console.log(calculate(10, 5, subtract)); // Повинно показати 5
-// console.log(calculate(10, 5, multiply)); // Повинно показати 50
-// console.log(calculate(10, 5, divide));   // Повинно показати 2
-// console.log(calculate(10, 0, divide));   // Повинно показати помилку
-
-
-
-// const repeatMessage = function (times, messageCreator) {
-//     for (let i = 0; i < times; i++) {
-//         messageCreator(i);
-//     };
-// };
-
-// const spamMessage = () => console.log('Its spam');
-// const goodDayMessage = () => console.log('Hello user!');
-// const goodByeMessage = () => console.log('Bye user!');
-
-// repeatMessage(10, spamMessage);
-// repeatMessage(1, goodDayMessage);
-// repeatMessage(1, goodByeMessage);
+// Тестування
+console.log(calculate(10, 5, add));      // Повинно показати 15
+console.log(calculate(10, 5, subtract)); // Повинно показати 5
+console.log(calculate(10, 5, multiply)); // Повинно показати 50
+console.log(calculate(10, 5, divide));   // Повинно показати 2
+console.log(calculate(10, 0, divide));   // Повинно показати помилку
 
 
 
-// const allMovies = ['Атлантида', 'Інфоголік', 'Поводир', 'Червоний', 'Мої думки тихі'];
+const repeatMessage = function (times, messageCreator) {
+    for (let i = 0; i < times; i++) {
+        messageCreator(i);
+    };
+};
 
-// const processMovies = function (movies, action) {
-//     for (let i = 0; i < movies.length; i++) {
-//         action(movies[i], i);
-//     };
-// };
+const spamMessage = () => console.log('Its spam');
+const goodDayMessage = () => console.log('Hello user!');
+const goodByeMessage = () => console.log('Bye user!');
 
-// const showMovie = (movie, index) => console.log(`${index + 1}. ${movie}`);
-// const upperCaseTitle = movie => console.log(movie.toUpperCase());
-// const movieLength = movie => console.log(`фільм "${movie}" має ${movie.length} символів у назві.`);
+repeatMessage(10, spamMessage);
+repeatMessage(1, goodDayMessage);
+repeatMessage(1, goodByeMessage);
 
-// processMovies(allMovies, showMovie);
-// processMovies(allMovies, upperCaseTitle);
-// processMovies(allMovies, movieLength);
+
+
+const allMovies = ['Атлантида', 'Інфоголік', 'Поводир', 'Червоний', 'Мої думки тихі'];
+
+const processMovies = function (movies, action) {
+    for (let i = 0; i < movies.length; i++) {
+        action(movies[i], i);
+    };
+};
+
+const showMovie = (movie, index) => console.log(`${index + 1}. ${movie}`);
+const upperCaseTitle = movie => console.log(movie.toUpperCase());
+const movieLength = movie => console.log(`фільм "${movie}" має ${movie.length} символів у назві.`);
+
+processMovies(allMovies, showMovie);
+processMovies(allMovies, upperCaseTitle);
+processMovies(allMovies, movieLength);
